@@ -4,17 +4,17 @@ on:
   push:
     branches: [main]
 
-    jobs:
-      build:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout code
-            uses: actions/checkout@v4
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-          - name: Ser up JDK 17
-            uses: acions/setup-java@v4
-            with:
-                distribuition: 'temurin'
-                java-version: '17'
-          - name: Build with Maven
-            run: mvn -B package -DskipTests
+      - name: Ser up JDK 17
+        uses: acions/setup-java@v4
+        with:
+            distribuition: 'temurin'
+            java-version: '17'
+      - name: Build with Maven
+        run: mvn -B package -DskipTests
