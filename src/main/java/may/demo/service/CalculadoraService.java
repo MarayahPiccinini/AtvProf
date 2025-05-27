@@ -1,4 +1,4 @@
-package may.demo.Service;
+package may.demo.service;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
