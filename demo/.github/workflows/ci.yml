@@ -2,7 +2,7 @@ name: atividade de CI
 
 on:
     push:
-        branches: [main]
+        branches: [ main ]
 
 jobs:
     build:
@@ -12,9 +12,9 @@ jobs:
             uses: actions/checkout@v4
 
           - name: Ser up JDK 17
-            uses: acions/setup-java@v4
+            uses: actions/setup-java@v4
             with:
-              distribuition: 'temurin'
+              distribution: 'temurin'
               java-version: '17'
 
           - name: Build with Maven
